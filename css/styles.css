@@ -164,7 +164,7 @@ body {
   opacity: 1;
 }
 
-.page__link--after::after {
+.page__link--overlay::after {
   content: "";
 
   display: block;
@@ -1005,9 +1005,7 @@ body {
 
 /* customizing styles portfolio page */
 
-/* --- add modifier --hidden in HTML --- */
-
-.portfolio-title--hidden {
+.hidden-title--hidden {
   /* hide the title */
   position: absolute;
   width: 1px;
@@ -1019,48 +1017,77 @@ body {
   clip: rect(0 0 0 0);
 }
 
-.portfolio-filter-list {
+.filter {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.portfolio-filter-list .portfolio-item + .portfolio-item {
-  margin-left: 8px;
+.filter__item {
+  margin-right: 8px;
+}
+.filter__item--append {
+  margin-right: 0;
 }
 
-.portfolio-list {
+.filter__button {
+  padding: 6px 22px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  border-width: 0px;
+  border-radius: 4px;
+
+  color: var(--primary-text-color);
+  background-color: var(--background-btn-color);
+
+  cursor: pointer;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter__button:focus,
+.filter__button:hover {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio {
   display: flex;
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
 }
 
-.portfolio-cards {
+.portfolio__item {
   margin-top: 30px;
   margin-left: 30px;
   flex-basis: calc(100% - 90px) / 3;
 }
 
-.portfolio-cards:hover .portfolio-text-back {
+.portfolio__item:hover .portfolio-card__text {
   transform: translateY(0);
 }
 
-.portfolio-cards:hover {
+.portfolio__item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.portfolio-cards-div {
-  position: relative;
-  overflow: hidden;
 }
 
 .portfolio-link {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-text-back {
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-card__text {
   position: absolute;
   top: 0;
   left: 0;
@@ -1081,7 +1108,7 @@ body {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-div {
+.portfolio-caption {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
@@ -1089,35 +1116,7 @@ body {
   padding: 20px 24px 20px 24px;
 }
 
-.portfolio-btn {
-  padding-top: 6px;
-  padding-left: 22px;
-  padding-bottom: 6px;
-  padding-right: 22px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  text-align: center;
-
-  border-width: 0px;
-  border-radius: 4px;
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  color: var(--primary-text-color);
-  background-color: var(--background-btn-color);
-}
-
-.portfolio-btn:focus,
-.portfolio-btn:hover {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.portfolio-second-title {
+.portfolio-caption__title {
   margin-bottom: 4px;
 
   font-weight: bold;
@@ -1126,7 +1125,7 @@ body {
   letter-spacing: 0.06em;
 }
 
-.portfolio-after-title {
+.portfolio-caption__text {
   color: var(--paragraph-color);
 
   font-size: 16px;
