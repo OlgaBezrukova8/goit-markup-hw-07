@@ -1,0 +1,56 @@
+.about__title--hidden {
+  /* hide the title */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+/* block advantages */
+
+.advantages {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantages__item--append {
+  margin-right: 30px;
+}
+
+.advantages__item--preperend {
+  margin-right: 0;
+}
+
+/* block svg-div */
+
+.svg-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 30px;
+
+  width: 270px;
+  height: 120px;
+
+  background-color: var(--background-btn-color);
+  border-radius: 4px;
+}
+
+.advantages__title {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.advantages__text {
+  line-height: 1.5;
+
+  color: var(--paragraph-color);
+}

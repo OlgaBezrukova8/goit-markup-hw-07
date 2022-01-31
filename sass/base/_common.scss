@@ -1,0 +1,29 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--primary-text-color);
+  background-color: var(--primary-white-color);
+
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+.input {
+  outline: none;
+}
