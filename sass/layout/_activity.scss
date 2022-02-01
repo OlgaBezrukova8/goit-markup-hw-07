@@ -5,8 +5,7 @@
 .activity__title {
   margin-bottom: 50px;
 
-  font-size: 36px;
-  line-height: 1.17;
+  @include font($font-s: 36px, $letter-s: null, $line-h: 1.17);
   text-align: center;
 }
 
@@ -34,9 +33,7 @@
   width: 100%;
   padding: 27px;
 
-  font-weight: bold;
-  letter-spacing: 0.03em;
-  line-height: 1.14;
+  @include font($line-h: 1.14);
   text-align: center;
   text-transform: uppercase;
 

@@ -2,9 +2,11 @@
   text-align: center;
   margin-bottom: 50px;
 
-  font-size: 36px;
-  line-height: calc(42 / 36);
-  letter-spacing: 0.03em;
+  @include font($font-s: 36px, $line-h: 1.17);
+
+  // font-size: 36px;
+  // line-height: 1.17;
+  // letter-spacing: 0.03em;
 }
 
 .brand {
