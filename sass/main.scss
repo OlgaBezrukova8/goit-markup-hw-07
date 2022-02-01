@@ -1,17 +1,26 @@
-@import "./utils/vars";
+@import "./utils/variables";
 @import "./base/reset";
 @import "./base/common";
 @import "./utils/hidden";
+@import "./utils/placeholders";
 
 // COMPONENTS
 
 @import "./components/container";
+@import "./components/modal";
 
-//LAYOUT
+@import "./components/footer-form";
+
+// LAYOUT
 
 @import "./layout/header";
 @import "./layout/hero";
 @import "./layout/about";
+@import "./layout/activity";
 @import "./layout/team";
 @import "./layout/clients";
 @import "./layout/footer";
+
+// page portfolio
+
+@import "./layout/portfolio";

@@ -1,16 +1,7 @@
-.about__title--hidden {
-  /* hide the title */
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
+.about {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
-
-/* block advantages */
 
 .advantages {
   display: flex;
@@ -25,11 +16,8 @@
   margin-right: 0;
 }
 
-/* block svg-div */
-
 .svg-box {
-  display: flex;
-  align-items: center;
+  @extend %flex-align;
   justify-content: center;
 
   margin-bottom: 30px;
