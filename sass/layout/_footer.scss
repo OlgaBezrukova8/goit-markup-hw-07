@@ -2,7 +2,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  background-color: var(--accent-background-color);
+  background-color: $accent-background-color;
 }
 
 .footer__container {
@@ -10,62 +10,62 @@
   align-items: baseline;
 }
 
-.address-box:not(:last-child) {
+.footer-address:not(:last-child) {
   margin-right: 70px;
 }
 
 .logo--inverse {
   margin-bottom: 20px;
 
-  color: var(--primary-white-color);
+  color: $primary-white-color;
 }
 
 .logo__text--accent-color {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
-.address__link {
+.footer-address__item--append {
+  margin-bottom: 9px;
+}
+
+.footer-address__link {
   font-style: normal;
   line-height: 1.71;
 
   color: rgba(255, 255, 255, 0.6);
 
   &:focus {
-    color: var(--accent-color);
+    color: $accent-color;
   }
 }
 
-.address__link--light-color {
-  color: var(--primary-white-color);
+.footer-address__link--light-color {
+  color: $primary-white-color;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $primary-transition;
 
   &:hover,
   &:focus {
-    color: var(--accent-color);
+    color: $accent-color;
   }
 }
 
-.address__item--append {
-  margin-bottom: 9px;
-}
-
-.social-box {
+.footer-social {
   margin-right: 93px;
 }
 
-.social-box__text {
+.footer-social__text {
   margin-bottom: 20px;
 
-  font-weight: bold;
+  font-weight: $primary-font-weight;
   line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  letter-spacing: $primary-letter-spacing;
+  text-transform: $primary-text-transform;
 
-  color: var(--primary-white-color);
+  color: $primary-white-color;
 }
 
-.footer-social {
+.footer-social__list {
   display: flex;
   justify-content: center;
 }
@@ -82,9 +82,9 @@
 }
 
 .footer-social__icon {
-  fill: var(--primary-white-color);
+  fill: $primary-white-color;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $primary-transition;
 }
 
 .footer-social__item {
@@ -95,12 +95,12 @@
   height: 44px;
   border-radius: 50%;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $primary-transition;
 
   background-color: rgba(255, 255, 255, 0.1);
 
   &:hover,
   &:focus {
-    background-color: var(--accent-color);
+    background-color: $accent-color;
   }
 }

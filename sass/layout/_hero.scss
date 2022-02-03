@@ -8,7 +8,7 @@
   padding-top: 200px;
   padding-bottom: 200px;
 
-  background-color: var(--accent-background-color);
+  background-color: $accent-background-color;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -28,9 +28,9 @@
 
   @include font(44px, 900, 1.36, 0.06em);
   text-align: center;
-  text-transform: uppercase;
+  text-transform: $primary-text-transform;
 
-  color: var(--primary-white-color);
+  color: $primary-white-color;
 }
 
 .hero__btn {
@@ -38,6 +38,6 @@
 
   &:hover,
   &:focus {
-    background-color: var(--background-accent-btn);
+    background-color: $background-accent-btn;
   }
 }

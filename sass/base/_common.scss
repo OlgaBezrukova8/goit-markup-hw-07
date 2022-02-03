@@ -5,12 +5,12 @@
 }
 
 body {
-  color: var(--primary-text-color);
-  background-color: var(--primary-white-color);
+  color: $primary-text-color;
+  background-color: $primary-white-color;
 
   font-family: Roboto, sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.03em;
+  font-size: $primary-font-size;
+  letter-spacing: $primary-letter-spacing;
 }
 
 .section {
@@ -21,7 +21,7 @@ body {
 .link {
   display: block;
   text-decoration: none;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
 }
 
 .input {
@@ -29,20 +29,20 @@ body {
 }
 
 .button {
-  font-weight: bold;
+  font-weight: $primary-font-weight;
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
 
-  border-radius: 4px;
+  border-radius: $primary-border-radius;
   border: none;
 
   cursor: pointer;
 
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
+  color: $primary-white-color;
+  background-color: $accent-color;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $primary-transition;
 }
 
 @keyframes animation-btn {

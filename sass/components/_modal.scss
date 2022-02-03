@@ -28,7 +28,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scaleX(1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $primary-transition;
 
   width: 528px;
   min-height: 581px;
@@ -37,14 +37,14 @@
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-radius: $primary-border-radius;
 
   animation-name: animation-btn;
   animation-duration: 1500ms;
   animation-timing-function: linear;
   /* animation-iteration-count: 1; */
 
-  background-color: var(--primary-white-color);
+  background-color: $primary-white-color;
 }
 
 .modal-close {
@@ -66,7 +66,7 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 30px;
 
-  background-color: var(--primary-white-color);
+  background-color: $primary-white-color;
 }
 
 .modal-close__icon {
@@ -75,21 +75,21 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $primary-transition;
 
   &:hover,
   &:focus {
-    fill: var(--accent-color);
+    fill: $accent-color;
   }
 }
 
 .modal__title {
   margin-bottom: 12px;
 
-  font-weight: bold;
+  font-weight: $primary-font-weight;
   font-size: 20px;
   line-height: 1.15;
-  letter-spacing: 0.03em;
+  letter-spacing: $primary-letter-spacing;
   text-align: center;
 }
 
@@ -104,10 +104,10 @@
 /* меняем цвет бордера при фокусе в поле формы (2 способ)
 
 .modal-form__box:focus-within > .form-input {
-  border: 1px solid var(--accent-color);
+  border: 1px solid $accent-color;
 } */
 
-.label-contact {
+.modal-form__label {
   display: block;
 
   margin-bottom: 4px;
@@ -116,10 +116,10 @@
   line-height: 14px;
   letter-spacing: 1.17;
 
-  color: var(--paragraph-color);
+  color: $paragraph-color;
 }
 
-.input-contact {
+.modal-form__input {
   padding: 12px 16px;
   padding-left: 42px;
 
@@ -128,22 +128,22 @@
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
-  border-radius: 4px;
+  border-radius: $primary-border-radius;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $primary-transition;
 
   &:focus {
-    border: 1px solid var(--accent-color);
+    border: 1px solid $accent-color;
   }
 
   &:focus ~ .form-icon {
-    fill: var(--accent-color);
+    fill: $accent-color;
   }
 }
 
 /* при фокусе иконка меняет цвет (выбираются все классы form-icon) */
 
-.input-contact--refactoring {
+.modal-form__input--refactoring {
   resize: none;
 
   width: 100%;
@@ -153,7 +153,13 @@
   margin-bottom: 20px;
 }
 
-.input-contact__textarea {
+.modal-form__icon {
+  position: absolute;
+  top: 55%;
+  left: 15px;
+}
+
+.modal-form__textarea {
   &::placeholder {
     font-size: 12px;
     line-height: calc(14 / 12);
@@ -163,42 +169,36 @@
   }
 }
 
-.form-icon {
-  position: absolute;
-  top: 55%;
-  left: 15px;
-}
-
-.modal-checkbox {
+.form-checkbox {
   @extend %flex-align;
 
   margin-bottom: 30px;
 }
 
-.label-checkbox {
+.form-checkbox__checkbox {
   display: inline-flex;
   align-items: center;
 
   margin-left: 10px;
 
-  font-size: 14px;
+  font-size: $primary-font-size;
   line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
+  letter-spacing: $primary-letter-spacing;
 
-  color: var(--paragraph-color);
+  color: $paragraph-color;
 }
 
-.input-checkbox {
+.form-checkbox__input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 
   position: absolute;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $primary-transition;
 }
 
-.modal-checkbox__text {
+.form-checkbox__text {
   display: inline-block;
 
   margin-right: 9px;
@@ -206,11 +206,11 @@
   width: 16px;
   height: 15px;
 
-  border: 2px solid var(--primary-text-color);
+  border: 2px solid $primary-text-color;
   border-radius: 2px;
 }
 
-.input-checkbox:checked + .modal-checkbox__text {
+.form-checkbox__input:checked + .form-checkbox__text {
   background-image: url(../images/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
@@ -218,16 +218,16 @@
   border: none;
 }
 
-.modal-checkbox__box {
+.form-checkbox__span {
   position: relative;
 
   margin-left: 4px;
 }
 
-.modal-checkbox__link {
+.form-checkbox__link {
   text-decoration: none;
 
-  color: var(--accent-color);
+  color: $accent-color;
 
   &::after {
     content: "";
@@ -238,7 +238,7 @@
     left: 0;
     bottom: 4px;
 
-    border: 0.1px solid var(--accent-color);
+    border: 0.1px solid $accent-color;
   }
 }
 
@@ -252,22 +252,22 @@
 
   padding: 10px 55px;
 
-  font-weight: bold;
+  font-weight: $primary-font-weight;
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  box-shadow: $primary-box-shadow;
+  border-radius: $primary-border-radius;
   border: none;
 
-  background: var(--accent-color);
-  color: var(--primary-white-color);
+  background: $accent-color;
+  color: $primary-white-color;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $primary-transition;
 
   &:hover,
   &:focus {
-    background-color: var(--background-accent-btn);
+    background-color: $background-accent-btn;
   }
 }

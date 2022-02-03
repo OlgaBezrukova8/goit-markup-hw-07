@@ -9,15 +9,15 @@
   text-align: center;
 }
 
-.development__list {
+.activity__list {
   @extend %flex-align;
 }
 
-.development__item--append {
+.activity__item--append {
   margin-right: 30px;
 }
 
-.development__item--prepend {
+.activity__item--prepend {
   margin-right: 0;
 }
 
@@ -35,8 +35,8 @@
 
   @include font($line-h: 1.14);
   text-align: center;
-  text-transform: uppercase;
+  text-transform: $primary-text-transform;
 
-  color: var(--primary-white-color);
+  color: $primary-white-color;
   background: rgba(47, 48, 58, 0.8);
 }
