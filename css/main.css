@@ -207,7 +207,7 @@ body {
   border: 1px solid #2196f3;
 }
 
-.modal-form__input:focus ~ .form-icon {
+.modal-form__input:focus ~ .modal-form__icon {
   fill: #2196f3;
 }
 

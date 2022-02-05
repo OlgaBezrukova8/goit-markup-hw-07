@@ -136,7 +136,7 @@
     border: 1px solid $accent-color;
   }
 
-  &:focus ~ .form-icon {
+  &:focus ~ .modal-form__icon {
     fill: $accent-color;
   }
 }
